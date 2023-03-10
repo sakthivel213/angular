@@ -11,7 +11,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/guest').then(console.log('connected'
 })
 dotenv.config()
 app.use('/', route)
-const port =process.env.port
+const port =process.env.port||2000
 app.listen(`${port}`,()=>{
     console.log(`this api is listening in port ${port}`)
 })
